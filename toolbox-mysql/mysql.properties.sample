@@ -1,0 +1,17 @@
+#=====================================================================================
+# MySQL configuration
+
+# Server host (default: 127.0.0.1)
+#host = someserver.domain
+
+# Server port (default: 3306)
+#port = 3310
+
+# User name (default: guest)
+#user = myuser
+
+# User password (default: guest)
+#password = mypass
+
+# Database name (default: database)
+#database = mydb
