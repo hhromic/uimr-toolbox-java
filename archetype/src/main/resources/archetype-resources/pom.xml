@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.github.hhromic.uimr</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>${archetypeVersion}</version>
+  </parent>
+
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+  <packaging>jar</packaging>
+
+  <!-- Define the name and description for your artifact -->
+  <name>Hello World</name>
+  <description>This artifact simple prints Hello World.</description>
+
+  <!-- Define information about the developers -->
+  <developers>
+    <developer>
+      <id>firlas</id>
+      <name>First Last</name>
+      <email>first.last@insight-centre.org</email>
+      <url>https://github.com/firlas/</url>
+    </developer>
+  </developers>
+
+  <!-- Main class of your artifact -->
+  <properties>
+    <mainClass>${package}.HelloWorld</mainClass>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- Remove unneeded UIMR Java Toolbox dependencies -->
+  <dependencies>
+    <dependency>
+      <groupId>io.github.hhromic.uimr</groupId>
+      <artifactId>logging</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.github.hhromic.uimr</groupId>
+      <artifactId>toolbox</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.github.hhromic.uimr</groupId>
+      <artifactId>toolbox-as</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.github.hhromic.uimr</groupId>
+      <artifactId>toolbox-concurrent</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.github.hhromic.uimr</groupId>
+      <artifactId>toolbox-mysql</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.github.hhromic.uimr</groupId>
+      <artifactId>toolbox-servlet</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.github.hhromic.uimr</groupId>
+      <artifactId>toolbox-stats</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.github.hhromic.uimr</groupId>
+      <artifactId>toolbox-twitter</artifactId>
+    </dependency>
+  </dependencies>
+</project>

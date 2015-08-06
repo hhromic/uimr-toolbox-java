@@ -1,0 +1,15 @@
+<configuration>
+  <appender name="color_stderr" class="ch.qos.logback.core.ConsoleAppender">
+    <target>System.err</target>
+    <withJansi>true</withJansi>
+    <encoder>
+      <pattern>%green(%date) %blue([){}%cyan(%thread){}%blue(]) %highlight(%-5level) %logger{15}: %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="ALL">
+    <appender-ref ref="color_stderr" />
+  </root>
+
+  <include resource="logback-local.xml" />
+</configuration>

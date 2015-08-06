@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.github.hhromic.uimr</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>4.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>toolbox-servlet</artifactId>
+  <packaging>jar</packaging>
+
+  <name>UIMR Java Toolbox: Servlet</name>
+  <description>Handy servlet (Jetty oriented) classes for quick research development.</description>
+
+  <developers>
+    <developer>
+      <id>hhromic</id>
+      <name>Hugo Hromic</name>
+      <url>https://github.com/hhromic/</url>
+    </developer>
+  </developers>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-servlet</artifactId>
+    </dependency>
+  </dependencies>
+</project>
