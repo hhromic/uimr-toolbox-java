@@ -168,6 +168,15 @@
               <link>http://neo4j.com/docs/2.2.3/javadocs/</link>
               <link>http://graphstream-project.org/api/gs-core/</link>
               <link>http://graphstream-project.org/api/gs-algo/</link>
+
+              <!-- UIMR Java Toolbox links -->
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox/target/site/apidocs/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-as/target/site/apidocs/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-concurrent/target/site/apidocs/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-mysql/target/site/apidocs/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-servlet/target/site/apidocs/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-stats/target/site/apidocs/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-twitter/target/site/apidocs/</link>
             </links>
           </configuration>
         </plugin>
