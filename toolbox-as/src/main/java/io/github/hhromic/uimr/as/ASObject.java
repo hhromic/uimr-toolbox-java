@@ -103,7 +103,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code attachments} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code attachments} property.
+     * @return the value of the {@code attachments} property
      */
     public ASObject[] getAttachments() {
         return attachments;
@@ -112,8 +112,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code attachments} property for this {@code ASObject}.</p>
      *
-     * @param attachments the value to set to the {@code attachments} property.
-     * @return this {@code ASObject} object.
+     * @param attachments the value to set to the {@code attachments} property
+     * @return this {@code ASObject} object
      */
     public ASObject setAttachments(final ASObject[] attachments) {
         this.attachments = attachments;
@@ -123,7 +123,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code author} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code author} property.
+     * @return the value of the {@code author} property
      */
     public ASObject getAuthor() {
         return author;
@@ -132,8 +132,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code author} property for this {@code ASObject}.</p>
      *
-     * @param author the value to set to the {@code author} property.
-     * @return this {@code ASObject} object.
+     * @param author the value to set to the {@code author} property
+     * @return this {@code ASObject} object
      */
     public ASObject setAuthor(final ASObject author) {
         this.author = author;
@@ -143,7 +143,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code content} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code content} property.
+     * @return the value of the {@code content} property
      */
     public String getContent() {
         return content;
@@ -152,8 +152,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code content} property for this {@code ASObject}.</p>
      *
-     * @param content the value to set to the {@code content} property.
-     * @return this {@code ASObject} object.
+     * @param content the value to set to the {@code content} property
+     * @return this {@code ASObject} object
      */
     public ASObject setContent(final String content) {
         this.content = content;
@@ -163,7 +163,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code displayName} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code displayName} property.
+     * @return the value of the {@code displayName} property
      */
     public String getDisplayName() {
         return displayName;
@@ -172,8 +172,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code displayName} property for this {@code ASObject}.</p>
      *
-     * @param displayName the value to set to the {@code displayName} property.
-     * @return this {@code ASObject} object.
+     * @param displayName the value to set to the {@code displayName} property
+     * @return this {@code ASObject} object
      */
     public ASObject setDisplayName(final String displayName) {
         this.displayName = displayName;
@@ -183,7 +183,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code downstreamDuplicates} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code downstreamDuplicates} property.
+     * @return the value of the {@code downstreamDuplicates} property
      */
     public String[] getDownstreamDuplicates() {
         return downstreamDuplicates;
@@ -192,8 +192,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code downstreamDuplicates} property for this {@code ASObject}.</p>
      *
-     * @param downstreamDuplicates the value to set to the {@code downstreamDuplicates} property.
-     * @return this {@code ASObject} object.
+     * @param downstreamDuplicates the value to set to the {@code downstreamDuplicates} property
+     * @return this {@code ASObject} object
      */
     public ASObject setDownstreamDuplicates(final String[] downstreamDuplicates) {
         this.downstreamDuplicates = downstreamDuplicates;
@@ -203,7 +203,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code id} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code id} property.
+     * @return the value of the {@code id} property
      */
     public String getId() {
         return id;
@@ -212,8 +212,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code id} property for this {@code ASObject}.</p>
      *
-     * @param id the value to set to the {@code id} property.
-     * @return this {@code ASObject} object.
+     * @param id the value to set to the {@code id} property
+     * @return this {@code ASObject} object
      */
     public ASObject setId(final String id) {
         this.id = id;
@@ -223,7 +223,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code image} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code image} property.
+     * @return the value of the {@code image} property
      */
     public MediaLink getImage() {
         return image;
@@ -232,8 +232,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code image} property for this {@code ASObject}.</p>
      *
-     * @param image the value to set to the {@code image} property.
-     * @return this {@code ASObject} object.
+     * @param image the value to set to the {@code image} property
+     * @return this {@code ASObject} object
      */
     public ASObject setImage(final MediaLink image) {
         this.image = image;
@@ -243,7 +243,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code objectType} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code objectType} property.
+     * @return the value of the {@code objectType} property
      */
     public String getObjectType() {
         return objectType;
@@ -252,8 +252,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code objectType} property for this {@code ASObject}.</p>
      *
-     * @param objectType the value to set to the {@code objectType} property.
-     * @return this {@code ASObject} object.
+     * @param objectType the value to set to the {@code objectType} property
+     * @return this {@code ASObject} object
      */
     public ASObject setObjectType(final String objectType) {
         this.objectType = objectType;
@@ -263,7 +263,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code published} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code published} property.
+     * @return the value of the {@code published} property
      */
     public Date getPublished() {
         return published;
@@ -272,8 +272,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code published} property for this {@code ASObject}.</p>
      *
-     * @param published the value to set to the {@code published} property.
-     * @return this {@code ASObject} object.
+     * @param published the value to set to the {@code published} property
+     * @return this {@code ASObject} object
      */
     public ASObject setPublished(final Date published) {
         this.published = published;
@@ -283,7 +283,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code summary} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code summary} property.
+     * @return the value of the {@code summary} property
      */
     public String getSummary() {
         return summary;
@@ -292,8 +292,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code summary} property for this {@code ASObject}.</p>
      *
-     * @param summary the value to set to the {@code summary} property.
-     * @return this {@code ASObject} object.
+     * @param summary the value to set to the {@code summary} property
+     * @return this {@code ASObject} object
      */
     public ASObject setSummary(final String summary) {
         this.summary = summary;
@@ -303,7 +303,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code updated} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code updated} property.
+     * @return the value of the {@code updated} property
      */
     public Date getUpdated() {
         return updated;
@@ -312,8 +312,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code updated} property for this {@code ASObject}.</p>
      *
-     * @param updated the value to set to the {@code updated} property.
-     * @return this {@code ASObject} object.
+     * @param updated the value to set to the {@code updated} property
+     * @return this {@code ASObject} object
      */
     public ASObject setUpdated(final Date updated) {
         this.updated = updated;
@@ -323,7 +323,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code upstreamDuplicates} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code upstreamDuplicates} property.
+     * @return the value of the {@code upstreamDuplicates} property
      */
     public String[] getUpstreamDuplicates() {
         return upstreamDuplicates;
@@ -332,8 +332,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code upstreamDuplicates} property for this {@code ASObject}.</p>
      *
-     * @param upstreamDuplicates the value to set to the {@code upstreamDuplicates} property.
-     * @return this {@code ASObject} object.
+     * @param upstreamDuplicates the value to set to the {@code upstreamDuplicates} property
+     * @return this {@code ASObject} object
      */
     public ASObject setUpstreamDuplicates(final String[] upstreamDuplicates) {
         this.upstreamDuplicates = upstreamDuplicates;
@@ -343,7 +343,7 @@ public class ASObject {
     /**
      * <p>Gets the {@code url} property for this {@code ASObject}.</p>
      *
-     * @return the value of the {@code url} property.
+     * @return the value of the {@code url} property
      */
     public String getUrl() {
         return url;
@@ -352,8 +352,8 @@ public class ASObject {
     /**
      * <p>Sets the {@code url} property for this {@code ASObject}.</p>
      *
-     * @param url the value to set to the {@code url} property.
-     * @return this {@code ASObject} object.
+     * @param url the value to set to the {@code url} property
+     * @return this {@code ASObject} object
      */
     public ASObject setUrl(final String url) {
         this.url = url;

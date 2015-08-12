@@ -7,7 +7,7 @@ package io.github.hhromic.uimr;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <pre>
+ * <pre>{@code
  * import io.github.hhromic.uimr.MurmurHash;
  *
  * public class MyClass {
@@ -16,7 +16,7 @@ package io.github.hhromic.uimr;
  *         System.out.println(MurmurHash.hash64("Hello World!"));
  *     }
  * }
- * </pre>
+ * }</pre>
  *
  * @author Viliam Holub
  * @since 1.0
@@ -28,10 +28,10 @@ public class MurmurHash {
      * <p>Original code taken from <a href="http://d3s.mff.cuni.cz/~holub/sw/javamurmurhash/">here</a>,
      * by Viliam Holub. See link for more information.</p>
      *
-     * @param data byte array to hash.
-     * @param length length of the array to hash.
-     * @param seed initial seed value.
-     * @return 64 bits ({@code long}) hash of the array.
+     * @param data byte array to hash
+     * @param length length of the array to hash
+     * @param seed initial seed value
+     * @return 64 bits ({@code long}) hash of the array
      */
     public static long hash64(final byte[] data, final int length, final int seed) {
         final long m = 0xc6a4a7935bd1e995L;
@@ -80,10 +80,10 @@ public class MurmurHash {
      * <p>Original code taken from <a href="http://d3s.mff.cuni.cz/~holub/sw/javamurmurhash/">here</a>,
      * by Viliam Holub. See link for more information.</p>
      *
-     * @param data byte array to hash.
-     * @param length length of the array to hash.
-     * @param seed initial seed value.
-     * @return 32 bits ({@code int}) hash of the array.
+     * @param data byte array to hash
+     * @param length length of the array to hash
+     * @param seed initial seed value
+     * @return 32 bits ({@code int}) hash of the array
      */
     public static int hash32(final byte[] data, int length, int seed) {
         final int m = 0x5bd1e995;
@@ -125,8 +125,8 @@ public class MurmurHash {
      *
      * <p><b>Note:</b> Always uses the following seed: {@code 0xe17a1465}.</p>
      *
-     * @param text string to hash.
-     * @return 64 bits ({@code long}) hash of the string.
+     * @param text string to hash
+     * @return 64 bits ({@code long}) hash of the string
      */
     public static long hash64(final String text) {
         final byte[] bytes = text.getBytes();
@@ -138,8 +138,8 @@ public class MurmurHash {
      *
      * <p><b>Note:</b> Always uses the following seed: {@code 0x9747b28c}.</p>
      *
-     * @param text string to hash.
-     * @return 32 bits ({@code int}) hash of the string.
+     * @param text string to hash
+     * @return 32 bits ({@code int}) hash of the string
      */
     public static int hash32(final String text) {
         final byte[] bytes = text.getBytes();
@@ -151,8 +151,8 @@ public class MurmurHash {
      *
      * <p>This method uses {@link #hash64(String)}. Take note of the default seed used.</p>
      *
-     * @param text string to hash.
-     * @return 63 bits ({@code long} without sign) hash of the string.
+     * @param text string to hash
+     * @return 63 bits ({@code long} without sign) hash of the string
      */
     public static long hash63(final String text) {
         return hash64(text) & 0x7FFFFFFFFFFFFFFFL;
@@ -163,8 +163,8 @@ public class MurmurHash {
      *
      * <p>This method uses {@link #hash32(String)}. Take note of the default seed used.</p>
      *
-     * @param text string to hash.
-     * @return 31 bits ({@code int} without sign) hash of the string.
+     * @param text string to hash
+     * @return 31 bits ({@code int} without sign) hash of the string
      */
     public static int hash31(final String text) {
         return hash32(text) & 0x7FFFFFFF;

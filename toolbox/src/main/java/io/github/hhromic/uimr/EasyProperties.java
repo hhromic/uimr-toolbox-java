@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <pre>
+ * <pre>{@code
  * import io.github.hhromic.uimr.EasyProperties;
  *
  * public class MyProperties extends EasyProperties {
@@ -42,7 +42,7 @@ import org.slf4j.LoggerFactory;
  *         System.out.println(props.getMyProperty());  // returns either the configured or default value
  *     }
  * }
- * </pre>
+ * }</pre>
  *
  * @author Hugo Hromic
  * @since 1.0
@@ -51,7 +51,7 @@ public class EasyProperties {
     /** Logger object for this EasyProperties object. */
     private final static Logger logger = LoggerFactory.getLogger(EasyProperties.class);
 
-    /** String lists item separator. <p>Value: {@code ,} (comma).</p> */
+    /** String lists item separator. */
     public final static String LIST_ITEM_SEPARATOR = ",";
 
     /** Base Java Properties object to hold the properties. */
@@ -62,7 +62,7 @@ public class EasyProperties {
      *
      * <p>If there is any error, default values will be used. This method is expected to never fail.</p>
      *
-     * @param fileName file to read program properties from.
+     * @param fileName file to read program properties from
      */
     public void loadFromFile(final String fileName) {
         try (final BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
@@ -77,9 +77,9 @@ public class EasyProperties {
     /**
      * Gets a {@code String} value from a property.
      *
-     * @param property the property name to get the value from.
-     * @param defaultValue the default value to use if property can't be found.
-     * @return {@code String} value of the property or default value.
+     * @param property the property name to get the value from
+     * @param defaultValue the default value to use if property can't be found
+     * @return {@code String} value of the property or default value
      */
     public String getString(final String property, final String defaultValue) {
         return properties.getProperty(property, defaultValue);
@@ -88,9 +88,9 @@ public class EasyProperties {
     /**
      * Parses a {@code boolean} value from a property.
      *
-     * @param property the property name to parse the {@code boolean} from.
-     * @param defaultValue the default value to use if a {@code boolean} value can't be parsed.
-     * @return parsed {@code boolean} value or default value.
+     * @param property the property name to parse the {@code boolean} from
+     * @param defaultValue the default value to use if a {@code boolean} value can't be parsed
+     * @return parsed {@code boolean} value or default value
      */
     public boolean parseBoolean(final String property, final boolean defaultValue) {
         try {
@@ -104,9 +104,9 @@ public class EasyProperties {
     /**
      * Parses an {@code int} value from a property.
      *
-     * @param property the property name to parse the {@code int} from.
-     * @param defaultValue the default value to use if a {@code int} value can't be parsed.
-     * @return parsed {@code int} value or default value.
+     * @param property the property name to parse the {@code int} from
+     * @param defaultValue the default value to use if a {@code int} value can't be parsed
+     * @return parsed {@code int} value or default value
      */
     public int parseInteger(final String property, final int defaultValue) {
         try {
@@ -120,9 +120,9 @@ public class EasyProperties {
     /**
      * Parses a {@code long} value from a property.
      *
-     * @param property the property name to parse the {@code long} from.
-     * @param defaultValue the default value to use if a {@code long} value can't be parsed.
-     * @return parsed {@code long} value or default value.
+     * @param property the property name to parse the {@code long} from
+     * @param defaultValue the default value to use if a {@code long} value can't be parsed
+     * @return parsed {@code long} value or default value
      */
     public long parseLong(final String property, final long defaultValue) {
         try {
@@ -136,9 +136,9 @@ public class EasyProperties {
     /**
      * Parses a {@code double} value from a property.
      *
-     * @param property the property name to parse the {@code double} from.
-     * @param defaultValue the default value to use if a {@code double} value can't be parsed.
-     * @return parsed {@code double} value or default value.
+     * @param property the property name to parse the {@code double} from
+     * @param defaultValue the default value to use if a {@code double} value can't be parsed
+     * @return parsed {@code double} value or default value
      */
     public double parseDouble(final String property, final double defaultValue) {
         try {
@@ -152,10 +152,11 @@ public class EasyProperties {
     /**
      * Parses an {@code Enum} value from a property.
      *
-     * @param property the property name to parse the {@code Enum} from.
-     * @param defaultValue the default value to use if an {@code Enum} value can't be parsed.
-     * @param enumClass the {@code Enum} class to use for parsing the value from.
-     * @return parsed {@code Enum} value or default value.
+     * @param <T> the type for the {@code Enum}
+     * @param property the property name to parse the {@code Enum} from
+     * @param defaultValue the default value to use if an {@code Enum} value can't be parsed
+     * @param enumClass the {@code Enum} class to use for parsing the value from
+     * @return parsed {@code Enum} value or default value
      */
     public <T extends Enum<T>> T parseEnumeration(final String property, final T defaultValue, final Class<T> enumClass) {
         try {
@@ -171,10 +172,10 @@ public class EasyProperties {
      *
      * <p>This method uses {@link Timestamp#fromString(String,SafeSimpleDateFormat)} to parse the timestamp.</p>
      *
-     * @param property the property name to parse the timestamp from.
-     * @param dateFormat the date format to use when parsing.
-     * @param defaultValue the default value to use if timestamp value can't be parsed.
-     * @return parsed timestamp ({@code long}) value or default value.
+     * @param property the property name to parse the timestamp from
+     * @param dateFormat the date format to use when parsing
+     * @param defaultValue the default value to use if timestamp value can't be parsed
+     * @return parsed timestamp ({@code long}) value or default value
      * @see SafeSimpleDateFormat
      */
     public long parseTimestamp(final String property, final SafeSimpleDateFormat dateFormat, final long defaultValue) {
@@ -192,9 +193,9 @@ public class EasyProperties {
      * <p>This method uses {@link #parseTimestamp(String,SafeSimpleDateFormat,long)} with the
      * default format value from {@link Timestamp#DEFAULT_FORMAT}.</p>
      *
-     * @param property the property name to parse the timestamp from.
-     * @param defaultValue the default value to use if timestamp value can't be parsed.
-     * @return parsed timestamp ({@code long}) value or default value.
+     * @param property the property name to parse the timestamp from
+     * @param defaultValue the default value to use if timestamp value can't be parsed
+     * @return parsed timestamp ({@code long}) value or default value
      */
     public long parseTimestamp(final String property, final long defaultValue) {
         return parseTimestamp(property, Timestamp.DEFAULT_FORMAT, defaultValue);
@@ -203,9 +204,9 @@ public class EasyProperties {
     /**
      * Parses an array of strings from a property.
      *
-     * @param property the property name to parse the array of strings from.
-     * @param defaultValue the default value to use if array value can't be parsed.
-     * @return parsed array of strings.
+     * @param property the property name to parse the array of strings from
+     * @param defaultValue the default value to use if array value can't be parsed
+     * @return parsed array of strings
      */
     public String[] parseStringArray(final String property, final String[] defaultValue) {
         final String propertyValue = properties.getProperty(property);

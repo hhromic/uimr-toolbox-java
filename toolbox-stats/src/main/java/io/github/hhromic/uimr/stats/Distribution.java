@@ -25,7 +25,7 @@ public class Distribution<E> {
     /**
      * Gets the current data distribution seen so far.
      *
-     * @return the current data distribution seen so far.
+     * @return the current data distribution seen so far
      */
     public Map<E,Long> getDistribution() {
         return distribution;
@@ -34,7 +34,7 @@ public class Distribution<E> {
     /**
      * Gets the total count of the data seen so far.
      *
-     * @return the total count of the data seen so far.
+     * @return the total count of the data seen so far
      */
     public long getTotalCount() {
         return totalCount;
@@ -45,10 +45,10 @@ public class Distribution<E> {
      *
      * <p>If the data element is not found, it is initialised to zero.</p>
      *
-     * @param element the data element to increment its count.
-     * @param amount the amount to increment the count.
-     * @return this same object.
-     * @throws NullPointerException if the element is null.
+     * @param element the data element to increment its count
+     * @param amount the amount to increment the count
+     * @return this same object
+     * @throws NullPointerException if the element is null
      */
     public Distribution<E> increment(final E element, final long amount) {
         if (element == null)
@@ -64,9 +64,9 @@ public class Distribution<E> {
     /**
      * Adds all data from a data distribution object to this distribution.
      *
-     * @param distribution distribution object to be added to this distribution.
-     * @return this same object.
-     * @throws NullPointerException if the distribution is null.
+     * @param distribution distribution object to be added to this distribution
+     * @return this same object
+     * @throws NullPointerException if the distribution is null
      */
     public Distribution<E> addAll(final Distribution<E> distribution) {
         if (distribution == null)

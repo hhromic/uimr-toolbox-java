@@ -19,7 +19,7 @@ import java.util.ArrayList;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <pre>
+ * <pre>{@code
  * import io.github.hhromic.uimr.twitter.EntitiesExtractor;
  *
  * public class MyClass {
@@ -32,7 +32,7 @@ import java.util.ArrayList;
  *         System.out.println(EntitiesExtractor.getRTOrigins(TEXT));
  *     }
  * }
- * </pre>
+ * }</pre>
  *
  * @author Hugo Hromic
  * @since 1.0
@@ -41,16 +41,12 @@ public class EntitiesExtractor {
     /**
      * Regular expression for {@code reply} entity.
      *
-     * <p>Pattern: {@code ^@(\\w+)}</p>
-     *
      * @see Pattern
      */
     public static final Pattern REPLY = Pattern.compile("^@(\\w+)");
 
     /**
      * Regular expression for {@code mention} entities.
-     *
-     * <p>Pattern: {@code (?>^|\\s)@(\\w+)}</p>
      *
      * @see Pattern
      */
@@ -59,16 +55,12 @@ public class EntitiesExtractor {
     /**
      * Regular expression for {@code hashtag} entities.
      *
-     * <p>Pattern: {@code (?>^|\\s)#(\\w+)}</p>
-     *
      * @see Pattern
      */
     public static final Pattern HASHTAGS = Pattern.compile("(?>^|\\s)#(\\w+)");
 
     /**
      * Regular expression for {@code URL} entities.
-     *
-     * <p>Pattern (case insensitive): {@code ((https?:\\/\\/([-\\w\\.]+)+(\\/([\\w/_\\.]*(\\?\\S+)?(#\\S+)?)?)?))}</p>
      *
      * @see Pattern
      */
@@ -77,8 +69,6 @@ public class EntitiesExtractor {
     /**
      * Regular expression for {@code retweet origin} entities.
      *
-     * <p>Pattern (case insensitive): {@code (?>RT|via)(?>\\b\\W*@(\\w+)+)}</p>
-     *
      * @see Pattern
      */
     public static final Pattern RTORIGINS = Pattern.compile("(?>RT|via)(?>\\b\\W*@(\\w+)+)", Pattern.CASE_INSENSITIVE);
@@ -86,10 +76,10 @@ public class EntitiesExtractor {
     /**
      * Internal pattern matching method.
      *
-     * @param pattern the {@code Pattern} to use for matching.
-     * @param group the group name within the {@code Pattern} to use for matching.
-     * @param string the string to match against.
-     * @return the list of matched texts.
+     * @param pattern the {@code Pattern} to use for matching
+     * @param group the group name within the {@code Pattern} to use for matching
+     * @param string the string to match against
+     * @return the list of matched texts
      * @see Pattern
      */
     private static List<Map<String,Object>> getPattern(final Pattern pattern, final String string) {
@@ -110,8 +100,8 @@ public class EntitiesExtractor {
     /**
      * Gets the reply entity from a given text.
      *
-     * @param string the text to extract entity from.
-     * @return the reply entity or {@code null} if not found.
+     * @param string the text to extract entity from
+     * @return the reply entity or {@code null} if not found
      */
     public static Map<String,Object> getReply(final String string) {
         final List<Map<String,Object>> reply = getPattern(REPLY, string);
@@ -123,8 +113,8 @@ public class EntitiesExtractor {
     /**
      * Gets the mention entities from a given text.
      *
-     * @param string the text to extract entities from.
-     * @return the list of found mention entities.
+     * @param string the text to extract entities from
+     * @return the list of found mention entities
      */
     public static List<Map<String,Object>> getMentions(final String string) {
         return getPattern(MENTIONS, string);
@@ -133,8 +123,8 @@ public class EntitiesExtractor {
     /**
      * Gets the hashtags entities from a given text.
      *
-     * @param string the text to extract entities from.
-     * @return the list of found hashtag entities.
+     * @param string the text to extract entities from
+     * @return the list of found hashtag entities
      */
     public static List<Map<String,Object>> getHashTags(final String string) {
         return getPattern(HASHTAGS, string);
@@ -143,8 +133,8 @@ public class EntitiesExtractor {
     /**
      * Gets the URL entities from a given text.
      *
-     * @param string the text to extract entities from.
-     * @return the list of found URL entities.
+     * @param string the text to extract entities from
+     * @return the list of found URL entities
      */
     public static List<Map<String,Object>> getURLs(final String string) {
         return getPattern(URLS, string);
@@ -153,8 +143,8 @@ public class EntitiesExtractor {
     /**
      * Gets the retweet origin entities from a given text.
      *
-     * @param string the text to extract entities from.
-     * @return the list found retweet origin entities.
+     * @param string the text to extract entities from
+     * @return the list found retweet origin entities
      */
     public static List<Map<String,Object>> getRTOrigins(final String string) {
         return getPattern(RTORIGINS, string);

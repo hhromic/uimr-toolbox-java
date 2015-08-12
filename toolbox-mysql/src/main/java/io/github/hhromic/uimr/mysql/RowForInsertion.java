@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <pre>
+ * <pre>{@code
  * import io.github.hhromic.uimr.mysql.MySQLManager;
  * import io.github.hhromic.uimr.mysql.RowForInsertion;
  * import io.github.hhromic.uimr.mysql.ColumnForInsertion;
@@ -29,7 +29,7 @@ import java.util.Arrays;
  *         mysql.transactionalInsert(row);
  *     }
  * }
- * </pre>
+ * }</pre>
  *
  * @author Hugo Hromic
  * @since 1.0

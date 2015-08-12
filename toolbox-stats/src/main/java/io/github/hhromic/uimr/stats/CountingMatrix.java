@@ -26,7 +26,7 @@ public class CountingMatrix<K1,K2> {
     /**
      * Gets all the keys stored for the first dimension.
      *
-     * @return the keys of the first dimension.
+     * @return the keys of the first dimension
      */
     public Set<K1> getKeys() {
         return sparseMatrix.keySet();
@@ -35,8 +35,8 @@ public class CountingMatrix<K1,K2> {
     /**
      * Gets all the keys stored for the second dimension for a particular first dimension key.
      *
-     * @param k1 the key for the first dimension.
-     * @return the keys of the second dimension, {@code null} if the key is not found.
+     * @param k1 the key for the first dimension
+     * @return the keys of the second dimension, {@code null} if the key is not found
      */
     public Set<K2> getKeys(final K1 k1) {
         if (sparseMatrix.containsKey(k1))
@@ -47,9 +47,9 @@ public class CountingMatrix<K1,K2> {
     /**
      * Gets the count of a particular (k1,k2) key pair.
      *
-     * @param k1 the key for the first dimension.
-     * @param k2 the key for the second dimension.
-     * @return the count of the key pair, zero if the (k1,k2) pair is not found.
+     * @param k1 the key for the first dimension
+     * @param k2 the key for the second dimension
+     * @return the count of the key pair, zero if the (k1,k2) pair is not found
      */
     public long getCount(final K1 k1, final K2 k2) {
         if (sparseMatrix.containsKey(k1) && sparseMatrix.get(k1).containsKey(k2))
@@ -62,9 +62,9 @@ public class CountingMatrix<K1,K2> {
      *
      * <p>If there is no count yet, it is initialised to 0.</p>
      *
-     * @param k1 the key for the first dimension.
-     * @param k2 the key for the second dimension.
-     * @param amount the amount to increment the count.
+     * @param k1 the key for the first dimension
+     * @param k2 the key for the second dimension
+     * @param amount the amount to increment the count
      */
     public void increment(final K1 k1, final K2 k2, final long amount) {
         // Increment count for (k1,k2) key pair
@@ -85,8 +85,8 @@ public class CountingMatrix<K1,K2> {
     /**
      * Gets the total count for a particular first dimension key.
      *
-     * @param k1 the key for the first dimension.
-     * @return the total count for the first dimension key, zero if the key is not found.
+     * @param k1 the key for the first dimension
+     * @return the total count for the first dimension key, zero if the key is not found
      */
     public long getTotalCount(final K1 k1) {
         if (totalCounts.containsKey(k1))

@@ -58,7 +58,7 @@ public class LongStatistics implements Statistics<Long> {
     }
 
     /** {@inheritDoc}
-     * @throws NullPointerException if the data is null.
+     * @throws NullPointerException if the data is null
      */
     public LongStatistics add(Long data) {
         if (data == null)
@@ -71,7 +71,7 @@ public class LongStatistics implements Statistics<Long> {
     }
 
     /** {@inheritDoc}
-     * @throws NullPointerException if the statistics is null.
+     * @throws NullPointerException if the statistics is null
      */
     public LongStatistics addAll(final Statistics<Long> statistics) {
         if (statistics == null)

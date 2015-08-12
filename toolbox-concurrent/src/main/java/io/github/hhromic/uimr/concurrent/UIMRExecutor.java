@@ -17,12 +17,12 @@ import java.util.HashMap;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <p><blockquote><pre>
+ * <pre><code>
  * import io.github.hhromic.uimr.concurrent.UIMRExecutor;
  * import io.github.hhromic.uimr.concurrent.AbstractUIMRRunnable;
  *
  * public class MyWorkerRunnable extends AbstractUIMRRunnable {
- *     {@literal @}Override
+ *    {@literal @}Override
  *     public void run() {
  *         System.out.println("I'm a runnable!");
  *         try {
@@ -46,7 +46,7 @@ import java.util.HashMap;
  *         System.out.println(executor.getRunnables("myworker"));
  *     }
  * }
- * </pre></blockquote></p>
+ * </code></pre>
  *
  * @author Hugo Hromic
  * @since 1.0
@@ -95,7 +95,7 @@ public class UIMRExecutor extends ThreadPoolExecutor {
      *
      * <p>Internally, this executor uses a {@code LinkedBlockingQueue} for handling the runnables.</p>
      *
-     * @param poolSize the desired allocated thread pool size.
+     * @param poolSize the desired allocated thread pool size
      * @see ThreadPoolExecutor
      * @see LinkedBlockingQueue
      */
@@ -123,8 +123,8 @@ public class UIMRExecutor extends ThreadPoolExecutor {
      *
      * <p>The {@code keepAfterExecute} flag allows to control if the runnable should be forgotten by this executor after finishing.</p>
      *
-     * @param runnable the {@code UIMRRunnable} to execute.
-     * @param keepAfterExecute {@code false} if the runnable should be forgotten after finishing, {@code true} otherwise.
+     * @param runnable the {@code UIMRRunnable} to execute
+     * @param keepAfterExecute {@code false} if the runnable should be forgotten after finishing, {@code true} otherwise
      * @see UIMRRunnable
      */
     public void execute(final UIMRRunnable runnable, final boolean keepAfterExecute) {
@@ -138,7 +138,7 @@ public class UIMRExecutor extends ThreadPoolExecutor {
      *
      * <p>This method calls {@code execute(UIMRRunnable,boolean)} with the {@code keepAfterExecute} parameter set to {@code false}.
      *
-     * @param runnable the {@code UIMRRunnable} to execute.
+     * @param runnable the {@code UIMRRunnable} to execute
      * @see #execute(UIMRRunnable, boolean)
      */
     public void execute(final UIMRRunnable runnable) {
@@ -151,8 +151,8 @@ public class UIMRExecutor extends ThreadPoolExecutor {
      * <p>This method calls {@code execute(UIMRRunnable)} and immediatelly after calls {@code ThreadPoolExecutor#shutdown()} to not
      * accept further tasks. Then, it waits for all runnables to finish and returns.</p>
      *
-     * @param runnables the list of {@code UIMRRunnable}s to execute.
-     * @return {@code true} if all {@code UIMRRunnable}s finished normally or {@code false} if the wait was interrupted.
+     * @param runnables the list of {@code UIMRRunnable}s to execute
+     * @return {@code true} if all {@code UIMRRunnable}s finished normally or {@code false} if the wait was interrupted
      * @see #execute(UIMRRunnable)
      */
     public boolean executeAndAwaitTermination(final List<UIMRRunnable> runnables) {
@@ -172,8 +172,8 @@ public class UIMRExecutor extends ThreadPoolExecutor {
     /**
      * Gets the {@code UIMRRunnable} with the specified exact name from this executor's pool.
      *
-     * @param name the name of the {@code UIMRRunnable} to get.
-     * @return the {@code UIMRRunnable}, or {@code null} if not found.
+     * @param name the name of the {@code UIMRRunnable} to get
+     * @return the {@code UIMRRunnable}, or {@code null} if not found
      * @see UIMRRunnable
      */
     public UIMRRunnable getRunnable(final String name) {
@@ -183,8 +183,8 @@ public class UIMRExecutor extends ThreadPoolExecutor {
     /**
      * Gets {@code UIMRRunnable} objects whose name matches the given prefix from this executor's pool.
      *
-     * @param prefix the prefix to use for name matching.
-     * @return a list of {@code UIMRRunnable} objects matching the name prefix.
+     * @param prefix the prefix to use for name matching
+     * @return a list of {@code UIMRRunnable} objects matching the name prefix
      * @see UIMRRunnable
      */
     public List<UIMRRunnable> getRunnables(final String prefix) {
@@ -198,7 +198,7 @@ public class UIMRExecutor extends ThreadPoolExecutor {
     /**
      * Gets all {@code UIMRRunnable} objects from this executor's pool.
      *
-     * @return a list of {@code UIMRRunnable} objects matching the name prefix.
+     * @return a list of {@code UIMRRunnable} objects matching the name prefix
      * @see UIMRRunnable
      */
     public List<UIMRRunnable> getRunnables() {

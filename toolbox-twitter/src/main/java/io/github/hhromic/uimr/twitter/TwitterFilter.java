@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <pre>
+ * <pre>{@code
  * import io.github.hhromic.uimr.twitter.TwitterFilter;
  *
  * public class MyClass {
@@ -29,22 +29,15 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
  *             System.out.println("Tweet matches Twitter Filter.");
  *     }
  * }
- * </pre>
+ * }</pre>
  *
  * @since 4.0
  */
 public class TwitterFilter {
-    /**
-     * Regular expression to split Tweet content into terms.
-     *
-     * <p>Value: {@code \\s|[@#\\:\\!\\'\"\\$\\%\\&\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;<=>\\?\\[\\\\\\]\\^\\{\\|\\}~]|[\u2000-\u206f]|[\u0080-\u00ff]}</p>
-     */
+    /** Regular expression to split Tweet content into terms. */
     public static final Pattern RE_SPLIT_TERM = Pattern.compile("\\s|[@#\\:\\!\\'\"\\$\\%\\&\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;<=>\\?\\[\\\\\\]\\^\\{\\|\\}~]|[\u2000-\u206f]|[\u0080-\u00ff]");
 
-    /**
-     * Regular expression to split track parameter phrases.
-     * <p>Value: {@code \\s}</p>
-     */
+    /** Regular expression to split track parameter phrases. */
     public static final Pattern RE_SPLIT_PHRASE = Pattern.compile("\\s");
 
     /** This Twitter Filter's track parameter. */
@@ -56,7 +49,7 @@ public class TwitterFilter {
     /**
      * Set this Twitter Filter's track parameter.
      *
-     * @param track the track set to use.
+     * @param track the track set to use
      */
     public void setTrack(final Set<String> track) {
         this.track = new HashSet<String>();
@@ -67,7 +60,7 @@ public class TwitterFilter {
     /**
      * Set this Twitter Filter's follow parameter.
      *
-     * @param track the follow set to use.
+     * @param follow the follow set to use
      */
     public void setFollow(final Set<Long> follow) {
         this.follow = follow;
@@ -76,8 +69,8 @@ public class TwitterFilter {
     /**
      * Evaluates if the given Tweet matches this Twitter Filter.
      *
-     * @param tweet the Tweet to evaluate.
-     * @return {@code true} if the Tweet matches, {@code false} otherwise.
+     * @param tweet the Tweet to evaluate
+     * @return {@code true} if the Tweet matches, {@code false} otherwise
      */
     public boolean matches(final ObjectNode tweet) {
         if (followMatches(tweet) || trackMatches(tweet))
@@ -88,8 +81,8 @@ public class TwitterFilter {
     /**
      * Evaluates if the given Tweet matches at least this Twitter Filter's track parameter.
      *
-     * @param tweet the Tweet to evaluate.
-     * @return {@code true} if the Tweet matches the track parameter, {@code false} otherwise.
+     * @param tweet the Tweet to evaluate
+     * @return {@code true} if the Tweet matches the track parameter, {@code false} otherwise
      */
     public boolean trackMatches(final ObjectNode tweet) {
         if (track == null || track.isEmpty()) return false;
@@ -111,8 +104,8 @@ public class TwitterFilter {
     /**
      * Computes terms (mentions, hashtags, tokenized text) contained in a Tweet.
      *
-     * @param tweet the Tweet to get the terms from.
-     * @return a set of terms from the Tweet.
+     * @param tweet the Tweet to get the terms from
+     * @return a set of terms from the Tweet
      */
     public Set<String> buildTerms(final ObjectNode tweet) {
         final Set<String> tweetTerms = new HashSet<String>();
@@ -146,8 +139,8 @@ public class TwitterFilter {
     /**
      * Evaluates if the given Tweet matches at least this Twitter Filter's follow parameter.
      *
-     * @param tweet the Tweet to evaluate.
-     * @return {@code true} if the Tweet matches the follow parameter, {@code false} otherwise.
+     * @param tweet the Tweet to evaluate
+     * @return {@code true} if the Tweet matches the follow parameter, {@code false} otherwise
      */
     public boolean followMatches(final ObjectNode tweet) {
         if (follow == null || follow.isEmpty()) return false;

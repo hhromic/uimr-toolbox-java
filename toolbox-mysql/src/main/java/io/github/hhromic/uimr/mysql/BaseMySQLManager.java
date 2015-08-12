@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <pre>
+ * <pre>{@code
  * import io.github.hhromic.uimr.mysql.BaseMySQLManager;
  *
  * public class DatabaseManager extends BaseMySQLManager {
@@ -52,7 +52,7 @@ import org.slf4j.LoggerFactory;
  *         System.out.println(dbManager.getPeople());
  *     }
  * }
- * </pre>
+ * }</pre>
  *
  * @author Hugo Hromic
  * @since 1.0
@@ -99,6 +99,7 @@ public class BaseMySQLManager {
      * Gets/opens a MySQL connection.
      *
      * @return the connection to the configured MySQL resource
+     * @throws SQLException if the operation fails
      * @see #BaseMySQLManager
      */
     protected Connection getConnection() throws SQLException {

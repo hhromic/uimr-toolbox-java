@@ -40,7 +40,7 @@ public class MediaLink {
     /**
      * <p>Gets the {@code duration} property for this {@code MediaLink}.</p>
      *
-     * @return the value of the {@code duration} property.
+     * @return the value of the {@code duration} property
      */
     public Integer getDuration() {
         return duration;
@@ -49,8 +49,8 @@ public class MediaLink {
     /**
      * <p>Sets the {@code duration} property for this {@code MediaLink}.</p>
      *
-     * @param duration the value to set to the {@code duration} property.
-     * @return this {@code MediaLink} object.
+     * @param duration the value to set to the {@code duration} property
+     * @return this {@code MediaLink} object
      */
     public MediaLink setDuration(final Integer duration) {
         this.duration = duration;
@@ -60,7 +60,7 @@ public class MediaLink {
     /**
      * <p>Gets the {@code height} property for this {@code MediaLink}.</p>
      *
-     * @return the value of the {@code height} property.
+     * @return the value of the {@code height} property
      */
     public Integer getHeight() {
         return height;
@@ -69,8 +69,8 @@ public class MediaLink {
     /**
      * <p>Sets the {@code height} property for this {@code MediaLink}.</p>
      *
-     * @param height the value to set to the {@code height} property.
-     * @return this {@code MediaLink} object.
+     * @param height the value to set to the {@code height} property
+     * @return this {@code MediaLink} object
      */
     public MediaLink setHeight(final Integer height) {
         this.height = height;
@@ -80,7 +80,7 @@ public class MediaLink {
     /**
      * <p>Gets the {@code url} property for this {@code MediaLink}.</p>
      *
-     * @return the value of the {@code url} property.
+     * @return the value of the {@code url} property
      */
     public String getUrl() {
         return url;
@@ -89,8 +89,8 @@ public class MediaLink {
     /**
      * <p>Sets the {@code url} property for this {@code MediaLink}.</p>
      *
-     * @param url the value to set to the {@code url} property.
-     * @return this {@code MediaLink} object.
+     * @param url the value to set to the {@code url} property
+     * @return this {@code MediaLink} object
      */
     public MediaLink setUrl(final String url) {
         this.url = url;
@@ -100,7 +100,7 @@ public class MediaLink {
     /**
      * <p>Gets the {@code width} property for this {@code MediaLink}.</p>
      *
-     * @return the value of the {@code width} property.
+     * @return the value of the {@code width} property
      */
     public Integer getWidth() {
         return width;
@@ -109,8 +109,8 @@ public class MediaLink {
     /**
      * <p>Sets the {@code width} property for this {@code MediaLink}.</p>
      *
-     * @param width the value to set to the {@code width} property.
-     * @return this {@code MediaLink} object.
+     * @param width the value to set to the {@code width} property
+     * @return this {@code MediaLink} object
      */
     public MediaLink setWidth(final Integer width) {
         this.width = width;

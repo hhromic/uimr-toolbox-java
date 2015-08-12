@@ -14,7 +14,7 @@ import java.text.ParseException;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <pre>
+ * <pre>{@code
  * import io.github.hhromic.uimr.twitter.SimpleTweet;
  * import io.github.hhromic.uimr.twitter.SimpleUser;
  *
@@ -27,25 +27,23 @@ import java.text.ParseException;
  *         System.out.println(tweet.formatNeo4J());
  *     }
  * }
- * </pre>
+ * }</pre>
  *
  * @author Hugo Hromic
  * @since 1.0
  * @see SimpleUser
  */
 public class SimpleTweet implements Comparable<SimpleTweet> {
-    /** Field separator for Neo4J formatting. <p>Value: {@code ;} (semi-colon).</p> */
+    /** Field list separator for Neo4J formatting. */
     public static final String NEO4J_FIELD_SEP = ";";
 
-    /** Field list separator for Neo4J formatting. <p>Value: {@code ,} (comma).</p> */
+    /** Field list separator for Neo4J formatting. */
     public static final String NEO4J_LIST_SEP = ",";
 
     /**
      * Date format for Twitter.
      *
-     * <p>Defined as: {@code new SafeSimpleDateFormat("EEE MMM d HH:mm:ss Z yyyy")}</p>
-     *
-     * @see java.util.text.SimpleDateFormat documentation for date formats.
+     * @see java.text.SimpleDateFormat documentation for date formats
      * @see SafeSimpleDateFormat
      */
     public static final SafeSimpleDateFormat TWITTER_DATE_FORMAT = new SafeSimpleDateFormat("EEE MMM d HH:mm:ss Z yyyy");
@@ -64,7 +62,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Gets the ID of this Tweet.
      *
-     * @return the ID of this Tweet.
+     * @return the ID of this Tweet
      */
     public Long getId() {
         return id;
@@ -73,7 +71,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Sets the ID of this Tweet.
      *
-     * @param id the ID to set.
+     * @param id the ID to set
      */
     public void setId(final Long id) {
         this.id = id;
@@ -82,7 +80,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Gets the timestamp ({@code long}) of this Tweet.
      *
-     * @return the timestamp ({@code long}) of this Tweet.
+     * @return the timestamp ({@code long}) of this Tweet
      */
     public Long getTimestamp() {
         return timestamp;
@@ -91,7 +89,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Sets the timestamp ({@code long}) of this Tweet.
      *
-     * @param timestamp the timestamp ({@code long}) to set.
+     * @param timestamp the timestamp ({@code long}) to set
      */
     public void setTimestamp(final Long timestamp) {
         this.timestamp = timestamp;
@@ -100,7 +98,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Gets the user (author) of this Tweet.
      *
-     * @return the user (author) of this Tweet.
+     * @return the user (author) of this Tweet
      */
     public SimpleUser getUser() {
         return user;
@@ -109,7 +107,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Sets the user (author) of this Tweet.
      *
-     * @param user the user (author) to set.
+     * @param user the user (author) to set
      */
     public void setUser(final SimpleUser user) {
         this.user = user;
@@ -118,7 +116,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Gets the text content of this Tweet.
      *
-     * @return the text content of this Tweet.
+     * @return the text content of this Tweet
      */
     public String getText() {
         return text;
@@ -129,7 +127,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
      *
      * <p>This method also triggers population of this Tweet's entities private fields.</p>
      *
-     * @param text the text content to set.
+     * @param text the text content to set
      * @see EntitiesExtractor
      */
     public void setText(final String text) {
@@ -144,7 +142,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Gets the reply entity of this Tweet.
      *
-     * @return the reply entity of this Tweet or {@code null} if not found.
+     * @return the reply entity of this Tweet or {@code null} if not found
      * @see EntitiesExtractor
      */
     public Map<String,Object> getReply() {
@@ -154,7 +152,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Gets the mention entities of this Tweet.
      *
-     * @return the list of mention entities of this Tweet.
+     * @return the list of mention entities of this Tweet
      * @see EntitiesExtractor
      */
     public List<Map<String,Object>> getMentions() {
@@ -164,7 +162,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Gets the hashtag entities of this Tweet.
      *
-     * @return the list of hashtag entities of this Tweet.
+     * @return the list of hashtag entities of this Tweet
      * @see EntitiesExtractor
      */
     public List<Map<String,Object>> getHashTags() {
@@ -174,7 +172,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Gets the URL entities of this Tweet.
      *
-     * @return the list of URL entities of this Tweet.
+     * @return the list of URL entities of this Tweet
      * @see EntitiesExtractor
      */
     public List<Map<String,Object>> getURLs() {
@@ -184,7 +182,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Gets the retweet origin entities of this Tweet.
      *
-     * @return the list of retweet origin entities of this Tweet.
+     * @return the list of retweet origin entities of this Tweet
      * @see EntitiesExtractor
      */
     public List<Map<String,Object>> getRTOrigins() {
@@ -197,9 +195,9 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
      * <p>This method also triggers population of this Tweet's entities private fields.</p>
      *
      * @param id the ID of this Tweet.
-     * @param timestamp the timestamp ({@code long}) of this Tweet.
-     * @param user the user (author) of this Tweet.
-     * @param text the text content of this Tweet.
+     * @param timestamp the timestamp ({@code long}) of this Tweet
+     * @param user the user (author) of this Tweet
+     * @param text the text content of this Tweet
      * @see EntitiesExtractor
      */
     public SimpleTweet(final Long id, final Long timestamp, final SimpleUser user, final String text) {
@@ -214,7 +212,7 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
      *
      * <p>The format used is: {@code AUTHOR;TIMESTAMP;REPLY;MENTIONS;HASHTAGS;RT_ORIGINS}</p>
      *
-     * @return the string format of this Tweet to push into Neo4J Twitter Plugin.
+     * @return the string format of this Tweet to push into Neo4J Twitter Plugin
      */
     public String formatNeo4J() {
         final StringBuilder output = new StringBuilder();
@@ -240,8 +238,9 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Parses a Twitter date into a timestamp ({@code long}).
      *
-     * @param string the string to parse into a Twitter date.
-     * @return the parsed timestamp ({@code long}).
+     * @param string the string to parse into a Twitter date
+     * @return the parsed timestamp ({@code long})
+     * @throws ParseException if the date could not be parsed
      * @see #TWITTER_DATE_FORMAT
      */
     public static long parseTwitterDate(final String string) throws ParseException {
@@ -251,8 +250,8 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     /**
      * Formats a timestamp ({@code long}) into a Twitter date.
      *
-     * @param timestamp the timestamp ({@code long}) to format into a Twitter date.
-     * @return the formatted Twitter date.
+     * @param timestamp the timestamp ({@code long}) to format into a Twitter date
+     * @return the formatted Twitter date
      * @see #TWITTER_DATE_FORMAT
      */
     public static String formatTwitterDate(final long timestamp) {
@@ -266,7 +265,6 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     }
 
     /** {@inheritDoc}
-     *
      * <p>The comparison is done using the {@code timestamp} field.</p>
      */
     @Override
@@ -275,7 +273,6 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     }
 
     /** {@inheritDoc}
-     *
      * <p>The simple tweet objects are compared according to their {@code id} field.</p>
      */
     @Override
@@ -288,7 +285,6 @@ public class SimpleTweet implements Comparable<SimpleTweet> {
     }
 
     /** {@inheritDoc}
-     *
      * <p>The hash code is generated using this simple tweet {@code id} field.</p>
      */
     @Override

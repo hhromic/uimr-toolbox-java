@@ -17,8 +17,7 @@ import javax.servlet.ServletResponse;
  * @since 4.0
  */
 public class TextStreamingHttpServlet extends StreamingHttpServlet {
-    /** Event delimiter string of this streaming text servlet. */
-    private final String EVENT_DELIMITER = "\r\n";
+    public static final String EVENT_DELIMITER = "\r\n";
 
     /** Events blocking queue of this streaming text servlet. */
     private final BlockingQueue eventsQueue;

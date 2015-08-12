@@ -45,8 +45,8 @@ public class SafeSimpleDateFormat {
      *
      * <p>This is thread-safe.</p>
      *
-     * @param format the format to use.
-     * @return the {@code SimpleDateFormat} instance.
+     * @param format the format to use
+     * @return the {@code SimpleDateFormat} instance
      */
     private DateFormat getDateFormat(final String format) {
         final Map<String,DateFormat> formatters = dateFormats.get();
@@ -61,7 +61,7 @@ public class SafeSimpleDateFormat {
     /**
      * Creates a new {@code SafeSimpleDateFormat} with specified format.
      *
-     * @param format the format to use.
+     * @param format the format to use
      * @see SimpleDateFormat
      */
     public SafeSimpleDateFormat(final String format) {
@@ -71,8 +71,8 @@ public class SafeSimpleDateFormat {
     /**
      * Formats a {@code Date} into a string using this formatter.
      *
-     * @param date the {@code Date} object to format.
-     * @return the string representation of the date.
+     * @param date the {@code Date} object to format
+     * @return the string representation of the date
      * @see SimpleDateFormat
      */
     public String format(final Date date) {
@@ -82,8 +82,8 @@ public class SafeSimpleDateFormat {
     /**
      * Formats an {@code Object} into a string using this formatter.
      *
-     * @param object the {@code Object} to format.
-     * @return the string representation of the object.
+     * @param object the {@code Object} to format
+     * @return the string representation of the object
      * @see SimpleDateFormat
      */
     public String format(final Object object) {
@@ -93,8 +93,9 @@ public class SafeSimpleDateFormat {
     /**
      * Parses a string into a {@code Date} using this formatter.
      *
-     * @param string the string to parse.
-     * @return the parsed {@code Date} object representing the string.
+     * @param string the string to parse
+     * @return the parsed {@code Date} object representing the string
+     * @throws ParseException if the string could not be parsed into a {@code Date}
      * @see SimpleDateFormat
      */
     public Date parse(final String string) throws ParseException {

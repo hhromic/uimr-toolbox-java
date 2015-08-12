@@ -78,7 +78,7 @@ public class Activity extends ASObject {
     /**
      * <p>Gets the {@code actor} property for this {@code Activity}.</p>
      *
-     * @return the value of the {@code actor} property.
+     * @return the value of the {@code actor} property
      */
     public ASObject getActor() {
         return actor;
@@ -87,8 +87,8 @@ public class Activity extends ASObject {
     /**
      * <p>Sets the {@code actor} property for this {@code Activity}.</p>
      *
-     * @param actor the value to set to the {@code actor} property.
-     * @return this {@code Activity} object.
+     * @param actor the value to set to the {@code actor} property
+     * @return this {@code Activity} object
      */
     public Activity setActor(final ASObject actor) {
         this.actor = actor;
@@ -98,7 +98,7 @@ public class Activity extends ASObject {
     /**
      * <p>Gets the {@code generator} property for this {@code Activity}.</p>
      *
-     * @return the value of the {@code generator} property.
+     * @return the value of the {@code generator} property
      */
     public ASObject getGenerator() {
         return generator;
@@ -107,8 +107,8 @@ public class Activity extends ASObject {
     /**
      * <p>Sets the {@code generator} property for this {@code Activity}.</p>
      *
-     * @param generator the value to set to the {@code generator} property.
-     * @return this {@code Activity} object.
+     * @param generator the value to set to the {@code generator} property
+     * @return this {@code Activity} object
      */
     public Activity setGenerator(final ASObject generator) {
         this.generator = generator;
@@ -118,7 +118,7 @@ public class Activity extends ASObject {
     /**
      * <p>Gets the {@code icon} property for this {@code Activity}.</p>
      *
-     * @return the value of the {@code icon} property.
+     * @return the value of the {@code icon} property
      */
     public MediaLink getIcon() {
         return icon;
@@ -127,8 +127,8 @@ public class Activity extends ASObject {
     /**
      * <p>Sets the {@code icon} property for this {@code Activity}.</p>
      *
-     * @param icon the value to set to the {@code icon} property.
-     * @return this {@code Activity} object.
+     * @param icon the value to set to the {@code icon} property
+     * @return this {@code Activity} object
      */
     public Activity setIcon(final MediaLink icon) {
         this.icon = icon;
@@ -138,7 +138,7 @@ public class Activity extends ASObject {
     /**
      * <p>Gets the {@code object} property for this {@code Activity}.</p>
      *
-     * @return the value of the {@code object} property.
+     * @return the value of the {@code object} property
      */
     public ASObject getObject() {
         return object;
@@ -147,8 +147,8 @@ public class Activity extends ASObject {
     /**
      * <p>Sets the {@code object} property for this {@code Activity}.</p>
      *
-     * @param object the value to set to the {@code object} property.
-     * @return this {@code Activity} object.
+     * @param object the value to set to the {@code object} property
+     * @return this {@code Activity} object
      */
     public Activity setObject(final ASObject object) {
         this.object = object;
@@ -158,7 +158,7 @@ public class Activity extends ASObject {
     /**
      * <p>Gets the {@code provider} property for this {@code Activity}.</p>
      *
-     * @return the value of the {@code provider} property.
+     * @return the value of the {@code provider} property
      */
     public ASObject getProvider() {
         return provider;
@@ -167,8 +167,8 @@ public class Activity extends ASObject {
     /**
      * <p>Sets the {@code provider} property for this {@code Activity}.</p>
      *
-     * @param provider the value to set to the {@code provider} property.
-     * @return this {@code Activity} object.
+     * @param provider the value to set to the {@code provider} property
+     * @return this {@code Activity} object
      */
     public Activity setProvider(final ASObject provider) {
         this.provider = provider;
@@ -178,7 +178,7 @@ public class Activity extends ASObject {
     /**
      * <p>Gets the {@code target} property for this {@code Activity}.</p>
      *
-     * @return the value of the {@code target} property.
+     * @return the value of the {@code target} property
      */
     public ASObject getTarget() {
         return target;
@@ -187,8 +187,8 @@ public class Activity extends ASObject {
     /**
      * <p>Sets the {@code target} property for this {@code Activity}.</p>
      *
-     * @param target the value to set to the {@code target} property.
-     * @return this {@code Activity} object.
+     * @param target the value to set to the {@code target} property
+     * @return this {@code Activity} object
      */
     public Activity setTarget(final ASObject target) {
         this.target = target;
@@ -198,7 +198,7 @@ public class Activity extends ASObject {
     /**
      * <p>Gets the {@code title} property for this {@code Activity}.</p>
      *
-     * @return the value of the {@code title} property.
+     * @return the value of the {@code title} property
      */
     public String getTitle() {
         return title;
@@ -207,8 +207,8 @@ public class Activity extends ASObject {
     /**
      * <p>Sets the {@code title} property for this {@code Activity}.</p>
      *
-     * @param title the value to set to the {@code title} property.
-     * @return this {@code Activity} object.
+     * @param title the value to set to the {@code title} property
+     * @return this {@code Activity} object
      */
     public Activity setTitle(final String title) {
         this.title = title;
@@ -218,7 +218,7 @@ public class Activity extends ASObject {
     /**
      * <p>Gets the {@code verb} property for this {@code Activity}.</p>
      *
-     * @return the value of the {@code verb} property.
+     * @return the value of the {@code verb} property
      */
     public String getVerb() {
         return verb;
@@ -227,8 +227,8 @@ public class Activity extends ASObject {
     /**
      * <p>Sets the {@code verb} property for this {@code Activity}.</p>
      *
-     * @param verb the value to set to the {@code verb} property.
-     * @return this {@code Activity} object.
+     * @param verb the value to set to the {@code verb} property
+     * @return this {@code Activity} object
      */
     public Activity setVerb(final String verb) {
         this.verb = verb;

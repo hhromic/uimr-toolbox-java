@@ -58,7 +58,7 @@ public class DoubleStatistics implements Statistics<Double> {
     }
 
     /** {@inheritDoc}
-     * @throws NullPointerException if the data is null.
+     * @throws NullPointerException if the data is null
      */
     public DoubleStatistics add(Double data) {
         if (data == null)
@@ -71,7 +71,7 @@ public class DoubleStatistics implements Statistics<Double> {
     }
 
     /** {@inheritDoc}
-     * @throws NullPointerException if the statistics is null.
+     * @throws NullPointerException if the statistics is null
      */
     public DoubleStatistics addAll(final Statistics<Double> statistics) {
         if (statistics == null)

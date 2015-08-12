@@ -9,15 +9,23 @@ import io.github.hhromic.uimr.EasyProperties;
  * @since 4.0
  */
 public class MySQLProperties extends EasyProperties {
-    /** Default properties file name. */
     public static final String PROPERTIES_FILE = "mysql.properties";
+    public static final String DEF_HOST = "localhost";
+    public static final int DEF_PORT = 3306;
+    public static final String DEF_USER = "guest";
+    public static final String DEF_PASSWORD = "guest";
+    public static final String DEF_DATABASE = "database";
 
     /** Internal singleton holder class. */
     private static class SingletonHolder {
         public static final MySQLProperties instance = new MySQLProperties();
     }
 
-    /** Get a singleton instance of this class. */
+    /**
+     * Gets a singleton instance of this class.
+     *
+     * @return the instance of this class
+     */
     public static MySQLProperties getInstance() {
         return SingletonHolder.instance;
     }
@@ -28,57 +36,47 @@ public class MySQLProperties extends EasyProperties {
     }
 
     /**
-     * Get the host of the MySQL server.
+     * Gets the configured host of the MySQL server.
      *
-     * <p>Default value: {@code 127.0.0.1}.</p>
-     *
-     * @return the configured value.
+     * @return the configured host of the MySQL server
      */
     public String getHost() {
-        return getString("host", "127.0.0.1");
+        return getString("host", DEF_HOST);
     }
 
     /**
-     * Get the port number of the MySQL server.
+     * Gets the configured port number of the MySQL server.
      *
-     * <p>Default value: {@code 3306}.</p>
-     *
-     * @return the configured value.
+     * @return the configured port number of the MySQL server
      */
     public int getPort() {
-        return parseInteger("port", 3306);
+        return parseInteger("port", DEF_PORT);
     }
 
     /**
-     * Get the user for the MySQL server.
+     * Gets the configured user for the MySQL server.
      *
-     * <p>Default value: {@code guest}.</p>
-     *
-     * @return the configured value.
+     * @return the configured user for the MySQL server
      */
     public String getUser() {
-        return getString("user", "guest");
+        return getString("user", DEF_USER);
     }
 
     /**
-     * Get the password for the MySQL server.
+     * Gets the configured password for the MySQL server.
      *
-     * <p>Default value: {@code guest}.</p>
-     *
-     * @return the configured value.
+     * @return the configured password for the MySQL server
      */
     public String getPassword() {
-        return getString("password", "guest");
+        return getString("password", DEF_PASSWORD);
     }
 
     /**
-     * Get the database name for the MySQL server.
+     * Gets the configured database name for the MySQL server.
      *
-     * <p>Default value: {@code database}.</p>
-     *
-     * @return the configured value.
+     * @return the configured database name for the MySQL server
      */
     public String getDatabase() {
-        return getString("database", "database");
+        return getString("database", DEF_DATABASE);
     }
 }

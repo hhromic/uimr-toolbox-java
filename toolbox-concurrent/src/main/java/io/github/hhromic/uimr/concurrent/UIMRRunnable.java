@@ -12,7 +12,7 @@ public interface UIMRRunnable extends Runnable {
     /**
       * Gets this UIMR runnable name.
       *
-      * @return the name of this runnable.
+      * @return the name of this runnable
       */
     public abstract String getName();
 

@@ -8,7 +8,7 @@ import java.text.ParseException;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <pre>
+ * <pre>{@code
  * import io.github.hhromic.uimr.Timestamp;
  *
  * public class MyClass {
@@ -18,7 +18,7 @@ import java.text.ParseException;
  *         System.out.println(Timestamp.fromString("2011-05-15 14:30:00.250"));
  *     }
  * }
- * </pre>
+ * }</pre>
  *
  * @author Hugo Hromic
  * @since 1.0
@@ -27,9 +27,7 @@ public class Timestamp {
     /**
      * Default timestamp string representation to parse from/format to.
      *
-     * <p>The default format is defined as: {@code new SafeSimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")}.</p>
-     *
-     * @see java.util.text.SimpleDateFormat documentation for date formats.
+     * @see java.text.SimpleDateFormat documentation for date formats
      * @see SafeSimpleDateFormat
      */
     public static final SafeSimpleDateFormat DEFAULT_FORMAT = new SafeSimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
@@ -37,9 +35,9 @@ public class Timestamp {
     /**
      * Formats the specified timestamp (long) using the specified date format.
      *
-     * @param timestamp the timestamp to format.
-     * @param dateFormat the date format to use for formatting.
-     * @return the string representation of the timestamp.
+     * @param timestamp the timestamp to format
+     * @param dateFormat the date format to use for formatting
+     * @return the string representation of the timestamp
      */
     public static String toString(final long timestamp, final SafeSimpleDateFormat dateFormat) {
         return dateFormat.format(new Date(timestamp));
@@ -48,8 +46,8 @@ public class Timestamp {
     /**
      * Formats the specified timestamp (long) using the default date format.
      *
-     * @param timestamp the timestamp to format.
-     * @return the string representation of the timestamp.
+     * @param timestamp the timestamp to format
+     * @return the string representation of the timestamp
      * @see #DEFAULT_FORMAT
      */
     public static String toString(final long timestamp) {
@@ -59,9 +57,10 @@ public class Timestamp {
     /**
      * Parses the specified string using a specified date format.
      *
-     * @param string the string to parse into a timestamp.
-     * @param dateFormat the date format to use for parsing.
-     * @return the parsed timestamp.
+     * @param string the string to parse into a timestamp
+     * @param dateFormat the date format to use for parsing
+     * @return the parsed timestamp
+     * @throws ParseException if the string could not be parsed
      * @see SafeSimpleDateFormat
      */
     public static long fromString(final String string, final SafeSimpleDateFormat dateFormat) throws ParseException {
@@ -71,8 +70,9 @@ public class Timestamp {
     /**
      * Parses the specified string using the default date format.
      *
-     * @param string the string to parse into a timestamp.
-     * @return the parsed timestamp.
+     * @param string the string to parse into a timestamp
+     * @return the parsed timestamp
+     * @throws ParseException if the string could not be parsed
      * @see #DEFAULT_FORMAT
      */
     public static long fromString(final String string) throws ParseException {

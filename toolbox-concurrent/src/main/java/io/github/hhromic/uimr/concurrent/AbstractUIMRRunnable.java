@@ -9,11 +9,11 @@ import java.util.concurrent.locks.Condition;
  * to minimize the effort required to implement the interface.
  *
  * <p><strong>Example usage:</strong></p>
- * <p><blockquote><pre>
+ * <pre><code>
  * import io.github.hhromic.uimr.concurrent.AbstractUIMRRunnable;
  *
  * public class MySmartRunnable extends AbstractUIMRRunnable {
- *     {@literal @}Override
+ *    {@literal @}Override
  *     public void run() {
  *         System.out.println("I'm smart, my name is " + getName());
  *         try {
@@ -24,7 +24,7 @@ import java.util.concurrent.locks.Condition;
  *         }
  *     }
  * }
- * </pre></blockquote></p>
+ * </code></pre>
  *
  * <p>For a complete use case, see the {@link UIMRExecutor} class example usage.</p>
  *
@@ -78,6 +78,7 @@ public abstract class AbstractUIMRRunnable implements UIMRRunnable {
       * <p>If available, this method has nanosecond precision for suspending.</p>
       *
       * @param millisecs the amount of time (in milliseconds) to suspend
+      * @throws InterruptedException if the thread is interrupted during suspension
       */
     protected void suspendRunnable(final double millisecs) throws InterruptedException {
         suspendLock.lock();

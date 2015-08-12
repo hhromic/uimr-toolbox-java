@@ -30,7 +30,12 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
             this(null, null);
         }
 
-        /** Creates a new {@code Entry} object. */
+        /**
+         * Creates a new {@code Entry} object.
+         *
+         * @param key the key for the {@code Entry} object
+         * @param value the value for the {@code Entry} object
+         */
         public Entry(final K key, final V value) {
             this.key = key;
             this.value = value;
@@ -39,7 +44,7 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
         /**
          * Gets the key of this entry.
          *
-         * @return the key of this entry.
+         * @return the key of this entry
          */
         public K getKey() {
             return key;
@@ -48,7 +53,7 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
         /**
          * Gets the value of this entry.
          *
-         * @return the value of this entry.
+         * @return the value of this entry
          */
         public V getValue() {
             return value;
@@ -57,8 +62,8 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
         /**
          * Sets or replaces the value for this entry.
          *
-         * @param value the value to set or replace.
-         * @return the old value of this entry.
+         * @param value the value to set or replace
+         * @return the old value of this entry
          */
         public V setValue(final V value) {
             final V oldValue = this.value;
@@ -107,7 +112,7 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
     /**
      * Creates a new {@code TopNTable} object.
      *
-     * @param n the cap (n) of the top-n data table.
+     * @param n the cap (n) of the top-n data table
      */
     public TopNTable(final int n) {
         this.n = n;
@@ -117,7 +122,7 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
     /**
      * Gets the cap (n) of the top-n data table.
      *
-     * @return the cap (n) of the top-n table.
+     * @return the cap (n) of the top-n table
      */
     public int getN() {
         return n;
@@ -129,7 +134,7 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
      * <p>The returned list is a copy of the internal top-n data table,
      * modifications to this list are not reflected into the internal structure.</p>
      *
-     * @return the list view of current entries from the top-n data table.
+     * @return the list view of current entries from the top-n data table
      */
     public List<Entry<K,V>> getEntries() {
         return new ArrayList<Entry<K,V>>(entries);
@@ -138,9 +143,9 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
     /**
      * Gets a particular entry from the top-n data table.
      *
-     * @param key the key of the entry to get from the top-n data table.
-     * @return the desired entry, or {@code null} if the key is not found.
-     * @throws NullPointerException if the key is null.
+     * @param key the key of the entry to get from the top-n data table
+     * @return the desired entry, or {@code null} if the key is not found
+     * @throws NullPointerException if the key is null
      */
     public Entry<K,V> getEntry(final K key) {
         if (key == null)
@@ -156,10 +161,10 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
      *
      * <p>If the data element is not found, it is created and inserted.</p>
      *
-     * @param key the key for the data element to update or add.
-     * @param value the value for the data element to update or add.
-     * @return this same object.
-     * @throws NullPointerException if the key and/or value are null.
+     * @param key the key for the data element to update or add
+     * @param value the value for the data element to update or add
+     * @return this same object
+     * @throws NullPointerException if the key and/or value are null
      */
     public TopNTable<K,V> update(final K key, final V value) {
         if (key == null || value == null)
@@ -179,9 +184,9 @@ public class TopNTable<K extends Comparable<K>,V extends Comparable<V>> {
     /**
      * Adds all data from a top-n data table object to this top-n data table.
      *
-     * @param topNTable top-n data table object to be added to this top-n data table.
-     * @return this same object.
-     * @throws NullPointerException if the top-n data table is null.
+     * @param topNTable top-n data table object to be added to this top-n data table
+     * @return this same object
+     * @throws NullPointerException if the top-n data table is null
      */
     public TopNTable<K,V> addAll(final TopNTable<K,V> topNTable) {
         if (topNTable == null)

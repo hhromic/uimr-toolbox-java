@@ -38,7 +38,7 @@ public class Collection {
     /**
      * <p>Gets the {@code totalItems} property for this {@code Collection}.</p>
      *
-     * @return the value of the {@code totalItems} property.
+     * @return the value of the {@code totalItems} property
      */
     public Integer getTotalItems() {
         return totalItems;
@@ -47,8 +47,8 @@ public class Collection {
     /**
      * <p>Sets the {@code totalItems} property for this {@code Collection}.</p>
      *
-     * @param totalItems the value to set to the {@code totalItems} property.
-     * @return this {@code Collection} object.
+     * @param totalItems the value to set to the {@code totalItems} property
+     * @return this {@code Collection} object
      */
     public Collection setTotalItems(final Integer totalItems) {
         this.totalItems = totalItems;
@@ -58,7 +58,7 @@ public class Collection {
     /**
      * <p>Gets the {@code items} property for this {@code Collection}.</p>
      *
-     * @return the value of the {@code items} property.
+     * @return the value of the {@code items} property
      */
     public ASObject[] getItems() {
         return items;
@@ -67,8 +67,8 @@ public class Collection {
     /**
      * <p>Sets the {@code items} property for this {@code Collection}.</p>
      *
-     * @param items the value to set to the {@code items} property.
-     * @return this {@code Collection} object.
+     * @param items the value to set to the {@code items} property
+     * @return this {@code Collection} object
      */
     public Collection setItems(final ASObject[] items) {
         this.items = items;
@@ -78,7 +78,7 @@ public class Collection {
     /**
      * <p>Gets the {@code url} property for this {@code Collection}.</p>
      *
-     * @return the value of the {@code url} property.
+     * @return the value of the {@code url} property
      */
     public String getUrl() {
         return url;
@@ -87,8 +87,8 @@ public class Collection {
     /**
      * <p>Sets the {@code url} property for this {@code Collection}.</p>
      *
-     * @param url the value to set to the {@code url} property.
-     * @return this {@code Collection} object.
+     * @param url the value to set to the {@code url} property
+     * @return this {@code Collection} object
      */
     public Collection setUrl(final String url) {
         this.url = url;

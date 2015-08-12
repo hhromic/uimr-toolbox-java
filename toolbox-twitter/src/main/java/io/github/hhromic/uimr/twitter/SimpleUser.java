@@ -5,7 +5,7 @@ package io.github.hhromic.uimr.twitter;
  *
  * <p><strong>Example usage:</strong></p>
  *
- * <pre>
+ * <pre>{@code
  * import io.github.hhromic.uimr.twitter.SimpleUser;
  *
  * public class MyClass {
@@ -15,7 +15,7 @@ package io.github.hhromic.uimr.twitter;
  *         System.out.println(user);
  *     }
  * }
- * </pre>
+ * }</pre>
  *
  * @since 1.0
  */
@@ -24,12 +24,12 @@ public class SimpleUser {
     protected Long id;
 
     /** Internal screen name for this simple user. */
-    protected String screen_name;
+    protected String screenName;
 
     /**
      * Gets the ID of this simple user.
      *
-     * @return the ID of this simple user.
+     * @return the ID of this simple user
      */
     public Long getId() {
         return id;
@@ -38,7 +38,7 @@ public class SimpleUser {
     /**
      * Sets the ID of this simple user.
      *
-     * @param id the ID to set.
+     * @param id the ID to set
      */
     public void setId(final Long id) {
         this.id = id;
@@ -47,40 +47,39 @@ public class SimpleUser {
     /**
      * Gets the screen name of this simple user.
      *
-     * @return the screen name of this simple user.
+     * @return the screen name of this simple user
      */
     public String getScreenName() {
-        return screen_name;
+        return screenName;
     }
 
     /**
      * Sets the screen name of this simple user.
      *
-     * @param screen_name the screen name to set.
+     * @param screenName the screen name to set
      */
-    public void setScreenName(final String screen_name) {
-        this.screen_name = screen_name;
+    public void setScreenName(final String screenName) {
+        this.screenName = screenName;
     }
 
     /**
      * Creates a simple user instance.
      *
-     * @param id the ID of the user.
-     * @param screen_name the screen name of the user.
+     * @param id the ID of the user
+     * @param screenName the screen name of the user
      */
-    public SimpleUser(final Long id, final String screen_name) {
+    public SimpleUser(final Long id, final String screenName) {
         this.id = id;
-        this.screen_name = screen_name;
+        this.screenName = screenName;
     }
 
     /** {@inheritDoc} */
     @Override
     public String toString() {
-        return String.format("<SimpleUser %d '%s'>", id, screen_name);
+        return String.format("<SimpleUser %d '%s'>", id, screenName);
     }
 
     /** {@inheritDoc}
-     *
      * <p>The simple user objects are compared according to their {@code id} field.</p>
      */
     @Override
@@ -93,7 +92,6 @@ public class SimpleUser {
     }
 
     /** {@inheritDoc}
-     *
      * <p>The hash code is generated using this simple user {@code id} field.</p>
      */
     @Override
