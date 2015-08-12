@@ -163,7 +163,7 @@
               <link>http://activemq.apache.org/maven/apidocs/</link>
               <link>http://www.slf4j.org/apidocs/</link>
               <link>http://logback.qos.ch/apidocs/</link>
-              <link>http://jansi.fusesource.org/documentation/api/</link>
+              <!-- <link>http://jansi.fusesource.org/documentation/api/</link> -->
               <link>http://twitter4j.org/javadoc/</link>
               <link>http://neo4j.com/docs/2.2.3/javadocs/</link>
               <link>http://graphstream-project.org/api/gs-core/</link>
