@@ -44,7 +44,7 @@
     <jersey.version>2.20</jersey.version>
     <jackson.version>2.6.1</jackson.version>
     <mysql.version>5.1.36</mysql.version>
-    <activemq.version>5.11.2</activemq.version>
+    <activemq.version>5.12.0</activemq.version>
     <twitter4j.version>4.0.4</twitter4j.version>
     <twittertext.version>1.12.1</twittertext.version>
     <neo4j.version>2.2.4</neo4j.version>
