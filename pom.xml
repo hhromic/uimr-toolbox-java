@@ -37,14 +37,14 @@
 
     <!-- Managed dependencies versions -->
     <uimr.version>4.0-SNAPSHOT</uimr.version>
-    <slf4j.version>1.7.20</slf4j.version>
+    <slf4j.version>1.7.21</slf4j.version>
     <logback.version>1.1.7</logback.version>
-    <jansi.version>1.11</jansi.version>
+    <jansi.version>1.12</jansi.version>
     <jetty.version>9.3.8.v20160314</jetty.version>
     <jersey.version>2.22.2</jersey.version>
-    <jackson.version>2.7.3</jackson.version>
-    <mysql.version>5.1.38</mysql.version>
-    <activemq.version>5.13.2</activemq.version>
+    <jackson.version>2.7.4</jackson.version>
+    <mysql.version>6.0.2</mysql.version>
+    <activemq.version>5.13.3</activemq.version>
     <twitter4j.version>4.0.4</twitter4j.version>
     <twittertext.version>1.13.4</twittertext.version>
     <neo4j.version>2.3.3</neo4j.version>
