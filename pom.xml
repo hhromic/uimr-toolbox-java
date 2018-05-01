@@ -152,18 +152,18 @@
               <link>http://docs.oracle.com/javase/8/docs/api/</link>
               <link>http://docs.oracle.com/javaee/7/api/</link>
               <link>http://download.eclipse.org/jetty/stable-9/apidocs/</link>
-              <link>http://jersey.java.net/apidocs/latest/jersey/</link>
-              <link>http://fasterxml.github.io/jackson-core/javadoc/2.6/</link>
-              <link>http://fasterxml.github.io/jackson-databind/javadoc/2.6/</link>
-              <link>http://fasterxml.github.io/jackson-annotations/javadoc/2.6/</link>
+              <link>http://jersey.github.io/apidocs/latest/jersey/</link>
+              <link>http://fasterxml.github.io/jackson-core/javadoc/2.9/</link>
+              <link>http://fasterxml.github.io/jackson-databind/javadoc/2.9/</link>
+              <link>http://fasterxml.github.io/jackson-annotations/javadoc/2.9/</link>
               <link>http://activemq.apache.org/maven/apidocs/</link>
               <link>http://www.slf4j.org/apidocs/</link>
               <link>http://logback.qos.ch/apidocs/</link>
-              <!-- <link>http://jansi.fusesource.org/documentation/api/</link> -->
+              <link>http://fusesource.github.io/jansi/documentation/api/</link>
               <link>http://twitter4j.org/javadoc/</link>
-              <link>http://neo4j.com/docs/2.2.3/javadocs/</link>
-              <link>http://graphstream-project.org/api/gs-core/</link>
-              <link>http://graphstream-project.org/api/gs-algo/</link>
+              <link>http://neo4j.com/docs/java-reference/current/javadocs/</link>
+              <link>http://data.graphstream-project.org/api/gs-core/current/</link>
+              <link>http://data.graphstream-project.org/api/gs-algo/current/</link>
 
               <!-- UIMR Java Toolbox links -->
               <link>http://hhromic.github.io/uimr-toolbox-java/toolbox/apidocs/</link>
