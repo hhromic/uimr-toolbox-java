@@ -166,13 +166,13 @@
               <link>http://data.graphstream-project.org/api/gs-algo/current/</link>
 
               <!-- UIMR Java Toolbox links -->
-              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox/apidocs/</link>
-              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-as/apidocs/</link>
-              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-concurrent/apidocs/</link>
-              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-mysql/apidocs/</link>
-              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-servlet/apidocs/</link>
-              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-stats/apidocs/</link>
-              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-twitter/apidocs/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-as/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-concurrent/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-mysql/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-servlet/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-stats/</link>
+              <link>http://hhromic.github.io/uimr-toolbox-java/toolbox-twitter/</link>
             </links>
           </configuration>
         </plugin>
