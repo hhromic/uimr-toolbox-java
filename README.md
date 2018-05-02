@@ -43,6 +43,8 @@ Afterwards, you can compile the example "Hello World" project from the archetype
     mvn clean package
     java -jar target/<YOUR_ARTIFACT_ID>-<YOUR_ARTIFACT_VERSION>-shaded.jar
 
+See: <https://maven.apache.org/guides/introduction/introduction-to-archetypes.html>
+
 ## License
 
 This software is under the **Apache License 2.0**.
