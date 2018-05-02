@@ -8,6 +8,12 @@ Follow these steps to install the toolbox in Linux machines:
     cd uimr-toolbox-java
     mvn clean install archetype:update-local-catalog
 
+## Documentation
+
+The Java apidocs for each module of this toolbox can be found here:
+
+    http://hhromic.github.io/uimr-toolbox-java/
+
 ## Skipping Tests
 
 By default, the parent POM of this toolbox skips tests during installation/packaging.
